@@ -1,0 +1,59 @@
+@import "tailwindcss";
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: 'Inter', system-ui, sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  background-color: #ffffff;
+  color: #1f2937;
+}
+
+/* Custom component classes */
+.upload-area {
+  border: 2px dashed #d1d5db;
+  border-radius: 0.75rem;
+  padding: 2rem;
+  text-align: center;
+  transition: all 0.3s ease-in-out;
+}
+
+.upload-area-active {
+  border-color: #60a5fa;
+  background-color: #eff6ff;
+  transform: scale(1.02);
+}
+
+.upload-area-inactive:hover {
+  border-color: #93c5fd;
+  background-color: #f9fafb;
+}
+
+.gradient-button {
+  background: linear-gradient(to right, #3b82f6, #6366f1);
+  color: white;
+  font-weight: 600;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s;
+  transform: scale(1);
+}
+
+.gradient-button:hover {
+  background: linear-gradient(to right, #2563eb, #4f46e5);
+  transform: scale(1.05);
+}
