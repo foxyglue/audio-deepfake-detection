@@ -58,12 +58,13 @@ function App() {
               width: '40px',
               height: '40px',
               background: 'linear-gradient(to right, #3b82f6, #6366f1)',
-              borderRadius: '8px',
+              borderRadius: '50%',
               display: 'flex',
               alignItems: 'center',
               justifyContent: 'center'
             }}>
-              <span style={{ color: 'white', fontWeight: 'bold', fontSize: '18px' }}>🎵</span>
+              {/* <span style={{ color: 'white', fontWeight: 'bold', fontSize: '18px' }}>🎵</span> */}
+              <img src="/src/assets/icon/logo.svg" alt="Audio Deepfake Detector Logo"/>
             </div>
             <div>
               <h1 style={{ fontSize: '24px', fontWeight: 'bold', color: '#1f2937', margin: 0 }}>
@@ -107,9 +108,9 @@ function App() {
 
       {/* Main Content */}
       <main style={{
-        maxWidth: '1024px',
-        margin: '0 auto',
-        padding: '2rem 1rem'
+        marginTop: '2rem',
+        marginLeft: '5rem',
+        marginRight: '5rem',
       }}>
         {/* Hero Section */}
         {status === 'idle' && (
@@ -253,10 +254,13 @@ function App() {
             error={uploadState.error}
           />
         ) : (
-          <ResultDisplay
-            result={uploadState.result}
-            onReset={resetState}
-          />
+          <div className='p-8'>
+            <ResultDisplay
+              result={uploadState.result}
+              onReset={resetState}
+            />
+
+          </div>
         )}
 
         {/* How it Works Section */}
@@ -371,9 +375,6 @@ function App() {
         }}>
           <p style={{ color: '#6b7280', marginBottom: '8px' }}>
             Powered by advanced machine learning • Privacy-focused analysis
-          </p>
-          <p style={{ color: '#9ca3af', fontSize: '14px' }}>
-            Built with React, TypeScript, and Tailwind CSS
           </p>
         </div>
       </footer>

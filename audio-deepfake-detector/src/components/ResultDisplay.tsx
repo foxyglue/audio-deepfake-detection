@@ -25,7 +25,7 @@ export const ResultDisplay: React.FC<ResultDisplayProps> = ({ result, onReset })
   };
 
   return (
-    <div className="bg-white rounded-xl shadow-lg p-8">
+    <div className="bg-white rounded-xl shadow-lg p-10" style={{padding: '2.5rem', gap: '1.5rem', display: 'flex', flexDirection: 'column'}}>
       {/* Main Result */}
       <div className="text-center mb-8">
         <div className={`inline-flex items-center justify-center w-24 h-24 rounded-full mb-6 ${
